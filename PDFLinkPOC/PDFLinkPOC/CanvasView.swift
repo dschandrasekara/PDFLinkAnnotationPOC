@@ -40,7 +40,7 @@ class CanvasView: UIView {
         guard let page else {
             return
         }
-
+        print("num of annotations - \(page.annotations.count)")
         if let cgPDFPage = page.pageRef {
             let cropBoxBounds = page.bounds(for: .cropBox)
             print(page.displaysAnnotations)

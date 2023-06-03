@@ -61,6 +61,7 @@ class ViewController: UIViewController {
         }
         pdfDocument = PDFDocument(url: fileUrl)
         let firstPage: PDFPage? = pdfDocument?.page(at: 0)
+        print("first page annotation count \(firstPage?.annotations.count)")
         guard let firstPage else {
             return
         }
